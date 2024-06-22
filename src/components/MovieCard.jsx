@@ -19,7 +19,15 @@ const MovieCard = ({ movie, selectMovie, scrollToTop }) => {
       ) : (
         <div className="movie-replacement">No Image Found</div>
       )}
-      <h5 className="movie-title">{movie.title}</h5>
+      <h4 className="movie-title">{movie.title}</h4>
+      <h5 className="movie-date"> Release Date: {movie.release_date}</h5>
+      <h5 className="movie-language">
+        Original Language: {movie.original_language}
+      </h5>
+      <h5 className="movie-vote">
+        {" "}
+        Average Popularity Vote: {movie.vote_average}%
+      </h5>
     </div>
   );
 };
