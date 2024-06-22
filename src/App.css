@@ -1,0 +1,378 @@
+@import url("https://fonts.googleapis.com/css2?family=Rufina:wght@400;700&display=swap");
+
+body {
+  background-color: #090a0e;
+  color: whitesmoke;
+  font-family: "Rufina", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.align-all {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  background-color: #1c1c1c;
+  padding: 10px 0;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-icon {
+  font-size: 2rem;
+  margin-right: 0;
+  color: green;
+}
+
+.movix {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0;
+  padding: 12px 0;
+  color: #b02828;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  background-color: #1c1c1c;
+  border-radius: 50px;
+  padding: 5px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  margin-left: 20px;
+}
+
+.input-container {
+  position: relative;
+  flex-grow: 1;
+}
+
+.input-container input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 1rem;
+  background-color: #333;
+  color: whitesmoke;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-container input::placeholder {
+  color: #aaa;
+}
+
+.input-container input:focus {
+  background-color: #444;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.clear-icon {
+  position: absolute;
+  right: calc(100% - 15px);
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.clear-icon:hover {
+  color: #fff;
+}
+
+.search-form button {
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #296c3a;
+  color: whitesmoke;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-left: 10px;
+}
+
+.search-form button:hover {
+  background-color: #218c3c;
+  transform: translateY(-2px);
+}
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  width: 100%;
+  border-radius: 0.8rem;
+}
+
+.hero-title {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.hero-overview {
+  max-width: 800px;
+  margin: 10px auto 0;
+  font-size: 1.125rem;
+  border-radius: 0.8rem;
+}
+
+.button {
+  background-color: #296c3a;
+  border: none;
+  color: whitesmoke;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-bottom: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+  background-color: #218c3c;
+  transform: translateY(-2px);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  background-color: #0f1014;
+  padding: 15px;
+  border-radius: 0.8rem;
+}
+
+.movie-card {
+  background-color: #1c1c1c;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  box-shadow: 0px 10px 15px -3px rgba(59, 57, 57, 0.6);
+}
+
+.movie-cover {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.movie-replacement {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 3;
+  background-color: gray;
+  color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.movie-title {
+  padding: 10px;
+  font-size: 1rem;
+  color: whitesmoke;
+}
+
+/* Modal styles */
+.trailer-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in, transform 0.3s ease-in;
+}
+
+.trailer-modal.show {
+  display: flex;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.trailer-content {
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+  height: auto;
+  max-height: 80vh;
+  transform: translateY(-50px);
+  opacity: 0;
+  transition: opacity 0.3s ease-in, transform 0.3s ease-in;
+}
+
+.trailer-modal.show .trailer-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.youtube-video {
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+
+.youtube-video iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: red;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+/* Pagination buttons */
+.pagination-button {
+  border: none;
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 8px 12px;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.pagination-button:hover {
+  background-color: #e0e0e0;
+}
+
+.pagination-button:disabled {
+  background-color: #d0d0d0;
+  cursor: not-allowed;
+}
+
+/* Active pagination button */
+.pagination-button.active {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+footer {
+  background-color: #1c1c1c;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+  margin-top: auto;
+}
+
+footer p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .trailer-content {
+    width: 95%;
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-overview {
+    font-size: 1rem;
+  }
+
+  .trailer-content {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .youtube-video {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+}
