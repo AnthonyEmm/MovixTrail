@@ -104,7 +104,7 @@ body {
   border-radius: 50px;
   font-size: 1rem;
   font-weight: 600;
-  background-color: #296c3a;
+  background-color: #c03232;
   color: whitesmoke;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
@@ -164,7 +164,7 @@ body {
 }
 
 .button {
-  background-color: #296c3a;
+  background-color: #c03232;
   border: none;
   color: whitesmoke;
   padding: 10px 20px;
