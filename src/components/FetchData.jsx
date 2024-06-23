@@ -202,8 +202,8 @@ const FetchData = () => {
         <header className="header">
           <div className="header-content align-all">
             <div className="logo">
-              <GiFilmProjector className="logo-icon" color="green" size={45} />
-              <span className="movix">Movix</span>
+              <GiFilmProjector className="logo-icon" color="green" size={50} />
+              <span className="movix">Movix Trail</span>
             </div>
             <form onSubmit={handleSearchMovies} className="search-form">
               <div className="input-container">
