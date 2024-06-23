@@ -44,6 +44,7 @@ body {
   margin: 0;
   padding: 12px 0;
   color: #b02828;
+  text-shadow: 2px 2px 4px rgba(138, 131, 131, 0.7);
 }
 
 .search-form {
