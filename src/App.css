@@ -222,7 +222,7 @@ body {
 
 .movie-title {
   padding: 10px;
-  font-size: 1.125rem;
+  font-size: 1.2rem;
   color: whitesmoke;
   margin: 0;
 }
@@ -234,6 +234,7 @@ body {
   margin: 5px 0;
   color: whitesmoke;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  text-align: justify;
 }
 
 /* Modal styles */
