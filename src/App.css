@@ -296,7 +296,6 @@ body {
   position: absolute;
   top: 10px;
   right: 10px;
-  background-color: red;
   border: none;
   color: white;
   font-size: 1rem;
@@ -317,8 +316,9 @@ body {
 /* Pagination buttons */
 .pagination-button {
   border: none;
-  background-color: #f0f0f0;
-  color: #333;
+  background-color: #c03232;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  color: white;
   padding: 8px 12px;
   margin: 0 5px;
   cursor: pointer;
@@ -328,7 +328,7 @@ body {
 }
 
 .pagination-button:hover {
-  background-color: #e0e0e0;
+  background-color: #8f8d8d;
 }
 
 .pagination-button:disabled {
@@ -338,7 +338,7 @@ body {
 
 /* Active pagination button */
 .pagination-button.active {
-  background-color: #4caf50;
+  background-color: rgba(128, 128, 128, 0.174);
   color: #fff;
 }
 
